@@ -81,6 +81,82 @@ router.post('/signup', function (req, res, next) {
 });
 
 
+router.post('/signup', function (req, res, next) {
+
+    var name = req.body.name;
+    var email = req.body.email;
+    var password = req.body.password;
+    var universityID = req.body.universityID;
+    var isLibrarian = email.endsWith("@sjsu.edu");
+    var code = Math.floor((Math.random() * 10000) + 1000);
+    var signUpUserQuery;
+
+
+    validator.isExistingUser(function (userStatus) {
+        console.log("userStatus :", userStatus)
+        if (userStatus) {
+            res.status(401).json({
+                result: "SignUp Failed",
+                status: 401
+            });
+        } else {
+
+            if (isLibrarian) {
+                signUpUserQuery = "INSERT INTO Librarian (Name,Email,Password,UniversityID,Code)VALUES('" +
+                    name +
+                    "','" +
+                    email +
+                    "','" +
+                    password +
+                    "','" +
+                    universityID +
+                    "','" +
+                    code + "')";
+
+            } else {
+
+                signUpUserQuery = "INSERT INTO Patron (Name,Email,Password,UniversityI,Code)VALUES('" +
+                    name +
+                    "','" +
+                    email +
+                    "','" +
+                    password +
+                    "','" +
+                    universityID +
+                    "','" +
+                    code + "')";
+
+            }
+            console.log("Query is:" + signUpUserQuery);
+
+            db.executeQuery(function (err, results) {
+                if (err) {
+                    console.log("ERROR: " + error.message);
+                    throw err;
+                } else {
+                    res.status(201).json({
+                        result: "SignUp Successfull",
+                        status: 201
+                    });
+
+                }
+            }, signUpUserQuery);
+        }
+
+        mail.sendMail(req, res, function (err) {
+            if (err) {
+                console.log("Error while sending email")
+            }
+            else {
+                console.log("Mail successfully sent")
+            }
+        });
+    }, email, isLibrarian);
+
+});
+
+
+
 router.post('/signin', function (req, res) {
 
     var email = req.body.email;
