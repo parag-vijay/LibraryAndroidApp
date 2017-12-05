@@ -22,7 +22,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/issue_date"
         android:text="Issue date : 27 Jun 2017"
-        android:layout_marginLeft="20dp"
         android:layout_below="@+id/book_name"/>
 
     <TextView

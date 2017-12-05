@@ -27,7 +27,7 @@ public class AuthPresenterImpl extends BasePresenter<AuthViewInteractor> impleme
     }
 
     @Override
-    public void signup(User user) {
+    public void signUp(User user) {
         Observable<Response> observable = service.signUp(user);
         getViewInteractor().showProgress();
 
@@ -57,8 +57,8 @@ public class AuthPresenterImpl extends BasePresenter<AuthViewInteractor> impleme
     }
 
     @Override
-    public void verifyAccount(String code) {
-
+    public void verifyAccount(String code, String email) {
+        Observable<Response<User>> observable = service.verify(code, email);
     }
 
     @Override

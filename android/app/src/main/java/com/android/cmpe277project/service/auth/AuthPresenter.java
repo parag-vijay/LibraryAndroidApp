@@ -10,9 +10,9 @@ import com.android.cmpe277project.model.User;
 
 public interface AuthPresenter extends Presenter<AuthViewInteractor> {
 
-    void signup(User user);
+    void signUp(User user);
 
-    void verifyAccount(String code);
+    void verifyAccount(String code, String email);
 
     void login(String email, String password);
 
