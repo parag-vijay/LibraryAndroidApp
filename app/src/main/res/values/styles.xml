@@ -1,8 +1,32 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="android:Theme.Material.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- changing color of back arrow --><!--
+        <item name="colorControlNormal">@color/white</item>
+        <item name="android:actionMenuTextColor">@color/blue_light</item>
+        <item name="android:actionMenuTextAppearance">@style/menuTitleTheme</item>-->
+    </style>
+
+    <style name="login_tab_layout_font_style">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="error_appearance" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#048702</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextLabel" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">#b3b2b2</item>
+        <item name="android:textSize">14sp</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">#4151d9</item>
+        <item name="colorControlNormal">#4151d9</item>
+        <item name="colorControlActivated">#4151d9</item>
     </style>
 
 </resources>

@@ -10,7 +10,8 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 
-import com.android.aaditya.weather.Config;
+
+import com.android.cmpe277project.Config;
 
 import java.util.ArrayList;
 import java.util.HashMap;
