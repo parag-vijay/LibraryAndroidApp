@@ -1,8 +1,14 @@
 package com.android.cmpe277project.service;
 
+import com.android.cmpe277project.model.User;
+
 import io.reactivex.Observable;
 import okhttp3.ResponseBody;
+import retrofit2.Response;
+import retrofit2.http.Body;
+import retrofit2.http.Field;
 import retrofit2.http.GET;
+import retrofit2.http.POST;
 import retrofit2.http.Query;
 
 /**
@@ -11,10 +17,10 @@ import retrofit2.http.Query;
 
 public interface Service {
 
-    @GET("forecast")
-    Observable<ResponseBody> get24HrForecast(@Query("lat") String lat, @Query("lon") String lon, @Query("appid") String key);
+    @POST("users/signup")
+    Observable<Response> signUp(@Body User user);
 
-    @GET("weather")
-    Observable<ResponseBody> getCurrentForecast(@Query("lat") String lat, @Query("lon") String lon, @Query("appid") String key);
+    @POST("users/signin")
+    Observable<ResponseBody> signIn(@Field("email") String email, @Field("password") String password);
 
 }

@@ -41,7 +41,7 @@ public class ApiModule {
         return apiModule;
     }
 
-    public Service getWeatherService() {
+    public Service getService() {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Config.OPEN_WEATHER_URL)
                 .client(provideOkHttpClient(provideInterceptors()))

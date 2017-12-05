@@ -1,6 +1,5 @@
 package com.android.cmpe277project.module.auth;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -11,10 +10,9 @@ import com.android.cmpe277project.R;
 import com.android.cmpe277project.base.BaseActivity;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnPageChange;
 
-public class MainActivity extends BaseActivity {
+public class OnBoardActivity extends BaseActivity {
 
     @BindView(R.id.home_tab_layout)
     TabLayout tabLayout;
