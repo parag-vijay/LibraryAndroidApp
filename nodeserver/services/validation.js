@@ -36,9 +36,17 @@ function isExistingUser(callbackFunction, email, isLibrarian) {
 
 
 function isAuthenticUser(callbackFunction, email, password) {
-    var isAuthenticUserQuery = "SELECT * FROM USERS WHERE EMAIL='" + email + "' AND PASSWORD='" + password + "'";
-    console.log("Query is:" + isAuthenticUserQuery);
 
+    var isAuthenticUserQuery;
+    if (isLibrarian) {
+        isAuthenticUserQuery = "SELECT * FROM Librarian WHERE EMAIL='" + email + "' AND PASSWORD='" + password + "'";
+
+    } else {
+
+        isAuthenticUserQuery = "SELECT * FROM Patron WHERE EMAIL='" + email + "' AND PASSWORD='" + password + "'";
+    }
+
+    console.log("Query is:" + isAuthenticUserQuery);
     db.executeQuery(function (err, results) {
         if (err) {
             console.log("ERROR: " + error.message);
