@@ -8,6 +8,7 @@ import java.util.List;
 
 public class Book {
     private String id;
+    private String ownerId;
     private String author;
     private String title;
     private String callNumber;
@@ -15,6 +16,8 @@ public class Book {
     private int yearOfPub;
     private String location;
     private int copies;
+    private String issueDate;
+    private String dueDate;
 
     private enum Status{
         AVAILABLE,
@@ -114,6 +117,30 @@ public class Book {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getOwnerId() {
+        return ownerId;
+    }
+
+    public void setOwnerId(String ownerId) {
+        this.ownerId = ownerId;
+    }
+
+    public String getIssueDate() {
+        return issueDate;
+    }
+
+    public void setIssueDate(String issueDate) {
+        this.issueDate = issueDate;
+    }
+
+    public String getDueDate() {
+        return dueDate;
+    }
+
+    public void setDueDate(String dueDate) {
+        this.dueDate = dueDate;
     }
 }
 

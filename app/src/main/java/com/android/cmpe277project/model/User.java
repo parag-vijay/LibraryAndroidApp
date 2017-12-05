@@ -9,17 +9,8 @@ import java.util.List;
 public class User {
     private String name;
     private String email;
-    private String token; // ?
+    private String password; // ?
     private int universityId;
-    private List<Book> bookList;
-
-
-    private enum UserType{
-        LIBRARIAN,
-        PATRON;
-    }
-
-    private UserType userType;
 
     public String getName() {
         return name;
@@ -37,12 +28,12 @@ public class User {
         this.email = email;
     }
 
-    public String getToken() {
-        return token;
+    public String getPassword() {
+        return password;
     }
 
-    public void setToken(String token) {
-        this.token = token;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public int getUniversityId() {
@@ -53,19 +44,4 @@ public class User {
         this.universityId = universityId;
     }
 
-    public List<Book> getBookList() {
-        return bookList;
-    }
-
-    public void setBookList(List<Book> bookList) {
-        this.bookList = bookList;
-    }
-
-    public UserType getUserType() {
-        return userType;
-    }
-
-    public void setUserType(UserType userType) {
-        this.userType = userType;
-    }
 }
