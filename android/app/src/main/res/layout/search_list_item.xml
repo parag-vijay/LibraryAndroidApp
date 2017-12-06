@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.daimajia.swipe.SwipeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe"
     android:layout_width="match_parent"
-    android:layout_height="105dp"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:tag="Bottom2"
+        android:id="@+id/checkout"
+        android:background="#f50404"
+        android:layout_width="70dp"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_add_shopping_cart_black_24dp"/>
+    </LinearLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#41ec6c"
+    android:id="@+id/info"
+    android:padding="10dp"
     >
     <ImageView
         android:layout_width="100dp"
@@ -53,3 +74,5 @@
 
 
 </RelativeLayout>
+
+</com.daimajia.swipe.SwipeLayout>
