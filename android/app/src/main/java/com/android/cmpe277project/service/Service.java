@@ -20,7 +20,7 @@ public interface Service {
     @POST("users/signup")
     Observable<Response> signUp(@Body User user);
 
-    @POST("users/activate")
+    @POST("users/verify")
     Observable<Response<User>> verify(@Field("code") String code, @Field("email") String email );
 
     @POST("users/signin")

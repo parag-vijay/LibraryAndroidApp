@@ -1,5 +1,7 @@
 package com.android.cmpe277project.model;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 /**
@@ -13,6 +15,7 @@ public class Book {
     private String title;
     private String callNumber;
     private String publisher;
+    @SerializedName("yop")
     private int yearOfPub;
     private String location;
     private int copies;

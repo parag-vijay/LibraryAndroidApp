@@ -11,9 +11,11 @@ import android.widget.EditText;
 
 import com.android.cmpe277project.R;
 import com.android.cmpe277project.base.BaseFragment;
+import com.android.cmpe277project.module.librarian.DashBoardActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import butterknife.OnTextChanged;
 
 /**
@@ -65,8 +67,10 @@ public class SignUpFragment extends BaseFragment {
         }
     }
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
+    @OnClick(R.id.btn_sign_up)
+    public void onViewClicked() {
+        Bundle b = new Bundle();
+        b.putString("type", "patron");
+        startActivity(DashBoardActivity.class, b);
     }
 }

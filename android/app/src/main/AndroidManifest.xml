@@ -17,6 +17,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".module.cart.CartActivity" />
+        <activity android:name=".module.librarian.AddBookActivity">
+
+        </activity>
+        <activity android:name=".module.librarian.DashBoardActivity" />
+        <activity android:name=".module.librarian.SearchActivity"></activity>
     </application>
 
 </manifest>
