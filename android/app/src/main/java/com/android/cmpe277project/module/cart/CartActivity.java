@@ -49,4 +49,9 @@ public class CartActivity extends BaseActivity {
     public void onViewClicked() {
 
     }
+
+    public void deleteFromCart(Cart cart) {
+        carts.remove(cart);
+        cartAdapter.notifyDataSetChanged();
+    }
 }

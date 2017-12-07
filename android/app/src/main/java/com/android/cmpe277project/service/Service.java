@@ -33,9 +33,8 @@ public interface Service {
     @POST("librarian/add")
     Observable<Response<ResponseBody>> addBook(@Body Book book );
 
-    @FormUrlEncoded
     @POST("librarian/update")
-    Observable<Response<ResponseBody>> updateBook(@Body Book book, @Field("email") String email );
+    Observable<Response<ResponseBody>> updateBook(@Body Book book);
 
     @FormUrlEncoded
     @POST("librarian/search")
