@@ -71,7 +71,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchView
 
         @OnClick(R.id.btn_update)
         public void onBtnUpdateClick() {
-
+            ((SearchActivity)context).updateBook(books.get(getAdapterPosition()));
         }
 
         @OnClick(R.id.btn_delete)

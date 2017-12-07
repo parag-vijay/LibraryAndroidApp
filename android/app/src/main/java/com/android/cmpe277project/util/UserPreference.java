@@ -2,6 +2,7 @@ package com.android.cmpe277project.util;
 
 import android.content.Context;
 
+import com.android.cmpe277project.model.Book;
 import com.android.cmpe277project.model.Cart;
 import com.android.cmpe277project.model.User;
 import com.google.gson.Gson;
@@ -21,6 +22,7 @@ public class UserPreference {
 
     private static final String USER = "_user";
     private static final String CART = "_cart";
+    private static final String ISSUED_BOOK = "_issuedbook";
 
     public UserPreference(Context context) {
         preferenceUtil = new PreferenceUtil(context);
@@ -46,6 +48,17 @@ public class UserPreference {
 
         return gson.fromJson(json, listType);
     }
+
+    public List<Book> readIssuedBooks(){
+        String json = preferenceUtil.readString(ISSUED_BOOK,"[]");
+
+        Type listType = new TypeToken<List<Book>>(){
+
+        }.getType();
+
+        return gson.fromJson(json, listType);
+    }
+
 
     public void clearUser() {
         preferenceUtil.clear();

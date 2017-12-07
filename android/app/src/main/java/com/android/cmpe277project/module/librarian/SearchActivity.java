@@ -7,6 +7,8 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,6 +22,7 @@ import com.android.cmpe277project.module.util.Bakery;
 import com.android.cmpe277project.service.librarian.LibrarianPresenter;
 import com.android.cmpe277project.service.librarian.LibrarianPresenterImpl;
 import com.android.cmpe277project.service.librarian.LibrarianViewInteractor;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,6 +44,8 @@ public class SearchActivity extends BaseActivity implements LibrarianViewInterac
     ProgressBar searchProgressBar;
     @BindView(R.id.rootLayout)
     LinearLayout rootLayout;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
 
     private SearchAdapter searchAdapter;
     private Book bookDel;
@@ -55,12 +60,38 @@ public class SearchActivity extends BaseActivity implements LibrarianViewInterac
         setContentView(R.layout.activity_search);
         ButterKnife.bind(this);
 
-        books = new ArrayList<>();
+        setSupportActionBar(toolbar);
+
+        getSupportActionBar().setTitle("");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         librarianPresenter = new LibrarianPresenterImpl(this);
+        librarianPresenter.attachViewInteractor(this);
+    }
 
-        books.add(new Book("Head First Java", "Becky"));
-        books.add(new Book("Cracking the coding Interview", "McDonald"));
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            // Respond to the action bar's Up/Home button
+            case android.R.id.home:
+                finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (!edtSearch.getText().toString().isEmpty())
+            librarianPresenter.search(edtSearch.getText().toString());
+    }
+
+    public void updateBook(Book book) {
+        Bundle bundle = new Bundle();
+        bundle.putString("book", new Gson().toJson(book));
+        startActivity(UpdateBookActivity.class, bundle);
     }
 
     public void deleteBook(Book book) {

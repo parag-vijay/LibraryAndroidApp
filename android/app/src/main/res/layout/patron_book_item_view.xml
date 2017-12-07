@@ -14,7 +14,7 @@
         android:textAlignment="center"
         android:text="Cracking the coding Interview"
         android:textSize="20sp"
-        android:id="@+id/book_name"
+        android:id="@+id/issued_book_name"
         android:layout_marginBottom="10dp"/>
 
     <TextView
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/issue_date"
         android:text="Issue date : 27 Jun 2017"
-        android:layout_below="@+id/book_name"/>
+        android:layout_below="@+id/issued_book_name"/>
 
     <TextView
         android:layout_width="wrap_content"
