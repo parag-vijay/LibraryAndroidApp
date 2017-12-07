@@ -8,7 +8,7 @@ import com.android.cmpe277project.model.Book;
  * Created by parag on 12/4/17.
  */
 
-public interface LibrarianPresenter extends Presenter<ViewInteractor> {
+public interface LibrarianPresenter extends Presenter<LibrarianViewInteractor> {
 
     void search(String query);
 

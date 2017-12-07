@@ -1,6 +1,9 @@
 package com.android.cmpe277project.service;
 
+import com.android.cmpe277project.model.Book;
 import com.android.cmpe277project.model.User;
+
+import java.util.List;
 
 import io.reactivex.Observable;
 import okhttp3.ResponseBody;
@@ -26,5 +29,21 @@ public interface Service {
     @FormUrlEncoded
     @POST("users/signin")
     Observable<ResponseBody> signIn(@Field("email") String email, @Field("password") String password);
+
+    @FormUrlEncoded
+    @POST("librarian/add")
+    Observable<Response<ResponseBody>> addBook(@Body Book book, @Field("email") String email );
+
+    @FormUrlEncoded
+    @POST("librarian/update")
+    Observable<Response<ResponseBody>> updateBook(@Body Book book, @Field("email") String email );
+
+    @FormUrlEncoded
+    @POST("librarian/search")
+    Observable<Response<List<Book>>> searchBook(@Field("searchstring") String query, @Field("email") String email);
+
+    @FormUrlEncoded
+    @POST("librarian/delete")
+    Observable<Response<ResponseBody>> deleteBook(@Field("bookId") String query, @Field("email") String email);
 
 }
