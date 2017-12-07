@@ -39,7 +39,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
 
     @Override
     public void onBindViewHolder(CartViewHolder viewHolder, int position) {
-        viewHolder.binViews(position);
+        viewHolder.bindViews(position);
     }
 
     @Override
@@ -59,7 +59,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
             ButterKnife.bind(this, itemView);
         }
 
-        void binViews(int position) {
+        void bindViews(int position) {
             txtTitle.setText(books.get(position).getTitle());
             serial.setText(position + 1 );
         }
