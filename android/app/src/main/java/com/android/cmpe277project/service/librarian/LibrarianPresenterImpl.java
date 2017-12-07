@@ -68,7 +68,7 @@ public class LibrarianPresenterImpl extends BasePresenter<LibrarianViewInteracto
 
     @Override
     public void addBook(Book book) {
-        Observable<Response<ResponseBody>> observable = service.addBook(book,user.getEmail());
+        Observable<Response<ResponseBody>> observable = service.addBook(book);
 
         getViewInteractor().showProgress();
         new CompositeDisposable().add(observable

@@ -10,6 +10,7 @@ import java.util.List;
 
 public class Book {
     private String id;
+    @SerializedName("email")
     private String ownerId;
     private String author;
     private String title;
@@ -22,7 +23,7 @@ public class Book {
     private String issueDate;
     private String dueDate;
 
-    private enum Status{
+    public enum Status{
         AVAILABLE,
         CHECKED_OUT,
         WAITING;
@@ -30,8 +31,11 @@ public class Book {
 
     private Status status;
 
-    private List<String> keywords;
+    private String keywords;
     private String image;
+
+    public Book() {
+    }
 
     public Book(String title, String author)
     {
@@ -104,11 +108,11 @@ public class Book {
         this.status = status;
     }
 
-    public List<String> getKeywords() {
+    public String getKeywords() {
         return keywords;
     }
 
-    public void setKeywords(List<String> keywords) {
+    public void setKeywords(String keywords) {
         this.keywords = keywords;
     }
 

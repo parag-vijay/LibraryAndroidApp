@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:id="@+id/rootLayout"
     tools:context="com.android.cmpe277project.module.librarian.AddBookActivity">
 
     <android.support.v7.widget.Toolbar
@@ -166,6 +167,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Add"
+        android:id="@+id/btn_add"
         android:layout_alignParentBottom="true"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/onboard_progressBar"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"/>
 
 </RelativeLayout>

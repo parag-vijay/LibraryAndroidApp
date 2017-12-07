@@ -30,9 +30,8 @@ public interface Service {
     @POST("users/signin")
     Observable<ResponseBody> signIn(@Field("email") String email, @Field("password") String password);
 
-    @FormUrlEncoded
     @POST("librarian/add")
-    Observable<Response<ResponseBody>> addBook(@Body Book book, @Field("email") String email );
+    Observable<Response<ResponseBody>> addBook(@Body Book book );
 
     @FormUrlEncoded
     @POST("librarian/update")
