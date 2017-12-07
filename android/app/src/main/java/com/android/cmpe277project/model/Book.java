@@ -33,6 +33,12 @@ public class Book {
     private List<String> keywords;
     private String image;
 
+    public Book(String title, String author)
+    {
+        this.title = title;
+        this.author = author;
+    }
+
     public String getAuthor() {
         return author;
     }

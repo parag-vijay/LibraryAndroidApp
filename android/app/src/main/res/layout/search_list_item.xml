@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
     <LinearLayout
         android:tag="Bottom2"
-        android:id="@+id/checkout"
+        android:id="@+id/add_to_cart"
         android:background="#f50404"
         android:layout_width="70dp"
         android:gravity="center"
