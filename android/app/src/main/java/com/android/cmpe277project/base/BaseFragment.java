@@ -47,4 +47,8 @@ public abstract class BaseFragment extends Fragment {
         startActivity(intent);
     }
 
+    protected View getContentView() {
+        return getView();
+    }
+
 }

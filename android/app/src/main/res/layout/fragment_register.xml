@@ -24,6 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter Name"
+                android:text="Aaditya"
                 android:inputType="text"
                 android:textSize="16sp"/>
 
@@ -44,6 +45,7 @@
                 android:layout_height="wrap_content"
                 android:hint="Enter University Id"
                 android:inputType="phone"
+                android:text="011815440"
                 android:textSize="16sp"/>
 
         </android.support.design.widget.TextInputLayout>
@@ -61,6 +63,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter email"
+                android:text="aaditya.deowanshi@gmail.com"
                 android:inputType="textEmailAddress"
                 android:textSize="16sp"/>
 
@@ -78,6 +81,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter Password"
+                android:text="123456"
                 android:inputType="textPassword"
                 android:textSize="16sp"/>
 

@@ -2,6 +2,9 @@ package com.android.cmpe277project.service;
 
 
 import com.android.cmpe277project.Config;
+import com.google.gson.FieldNamingPolicy;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -15,8 +18,10 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 import okhttp3.logging.HttpLoggingInterceptor;
+import retrofit2.Converter;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * Created by aaditya on 10/20/17.
@@ -43,14 +48,26 @@ public class ApiModule {
 
     public Service getService() {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(Config.OPEN_WEATHER_URL)
+                .baseUrl(Config.API_BASE_URL_PRODUCTION)
                 .client(provideOkHttpClient(provideInterceptors()))
+                .addConverterFactory(provideGsonConverterFactory(provideGson()))
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build();
 
         return retrofit.create(Service.class);
     }
 
+
+    public Converter.Factory provideGsonConverterFactory(Gson gson) {
+        return GsonConverterFactory.create(gson);
+    }
+
+    public Gson provideGson() {
+        return new GsonBuilder()
+                .setFieldNamingPolicy(FieldNamingPolicy.IDENTITY)
+                .serializeNulls()
+                .create();
+    }
 
     public OkHttpClient provideOkHttpClient(List<Interceptor> interceptors) {
         OkHttpClient.Builder builder = new OkHttpClient.Builder();

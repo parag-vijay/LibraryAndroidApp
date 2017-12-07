@@ -13,6 +13,8 @@ import android.widget.TextView;
 import com.android.cmpe277project.R;
 import com.android.cmpe277project.base.BaseFragment;
 import com.android.cmpe277project.module.librarian.DashBoardActivity;
+import com.android.cmpe277project.module.util.Bakery;
+import com.android.cmpe277project.service.auth.AuthViewInteractor;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -23,7 +25,7 @@ import butterknife.OnTextChanged;
  * Created by aaditya on 12/4/17.
  */
 
-public class LoginFragment extends BaseFragment {
+public class LoginFragment extends BaseFragment{
 
     @BindView(R.id.edt_email)
     EditText edtEmail;
@@ -34,6 +36,8 @@ public class LoginFragment extends BaseFragment {
     @BindView(R.id.txt_forgot_password)
     TextView txtForgotPassword;
 
+    private Bakery bakery;
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,13 +46,14 @@ public class LoginFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_signin, null);
-        ButterKnife.bind(this, view);
         return view;
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        bakery = new Bakery(getContext());
     }
 
     @OnTextChanged(R.id.edt_email)
@@ -69,8 +74,16 @@ public class LoginFragment extends BaseFragment {
 
     @OnClick(R.id.btn_login)
     public void onViewClicked() {
-        Bundle b =  new Bundle();
-        b.putString("type","librarian");
-        startActivity(DashBoardActivity.class, b);
+        if (edtEmail.getText().toString().isEmpty()) {
+            bakery.snackShort(getContentView(), "Email cannot be empty");
+            return;
+        }
+
+        if (edtPassword.getText().toString().isEmpty() || edtPassword.getText().toString().length() < 6) {
+            bakery.snackShort(getContentView(), "Password must be minimum 6 characters");
+            return;
+        }
+
+        ((OnBoardActivity)getActivity()).login(edtEmail.getText().toString(), edtPassword.getText().toString());
     }
 }

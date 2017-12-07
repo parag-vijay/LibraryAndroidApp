@@ -15,7 +15,7 @@ public interface AuthViewInteractor extends ViewInteractor {
 
     void onLogin(User user);
 
-    void onRegister();
+    void onRegister(String email);
 
     void onVerified(User user);
 }

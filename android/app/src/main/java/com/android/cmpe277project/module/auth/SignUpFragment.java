@@ -11,6 +11,7 @@ import android.widget.EditText;
 
 import com.android.cmpe277project.R;
 import com.android.cmpe277project.base.BaseFragment;
+import com.android.cmpe277project.model.User;
 import com.android.cmpe277project.module.librarian.DashBoardActivity;
 
 import butterknife.BindView;
@@ -69,8 +70,11 @@ public class SignUpFragment extends BaseFragment {
 
     @OnClick(R.id.btn_sign_up)
     public void onViewClicked() {
-        Bundle b = new Bundle();
-        b.putString("type", "patron");
-        startActivity(DashBoardActivity.class, b);
+        User user = new User();
+        user.setName(edtName.getText().toString());
+        user.setPassword(edtPassword.getText().toString());
+        user.setUniversityId(Integer.parseInt(edtUnvId.getText().toString()));
+        user.setEmail(edtEmail.getText().toString());
+        ((OnBoardActivity)getActivity()).register(user);
     }
 }

@@ -39,6 +39,7 @@
         android:layout_centerHorizontal="true"
         android:background="@color/colorPrimary"
         android:text="Issue"
+        android:id="@+id/btn_issue"
         android:textColor="#FFF"/>
 
 </RelativeLayout>

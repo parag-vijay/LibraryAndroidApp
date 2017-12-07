@@ -26,6 +26,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter email"
+                android:text="sunil.tiwari@sjsu.edu"
                 android:inputType="textEmailAddress"
                 android:textSize="16sp"/>
 
@@ -43,6 +44,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter Password"
+                android:text="Anup@28"
                 android:inputType="textPassword"
                 android:textSize="16sp"/>
 
