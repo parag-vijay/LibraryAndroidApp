@@ -28,7 +28,6 @@ import retrofit2.Response;
 public class LibrarianPresenterImpl extends BasePresenter<LibrarianViewInteractor> implements LibrarianPresenter {
 
     private Service service;
-    private JsonObject raw_response;
     private UserPreference userPreference;
     private User user;
 
@@ -95,7 +94,7 @@ public class LibrarianPresenterImpl extends BasePresenter<LibrarianViewInteracto
 
     @Override
     public void updateBook(Book book) {
-        Observable<Response<ResponseBody>> observable = service.updateBook(book,user.getEmail());
+        Observable<Response<ResponseBody>> observable = service.updateBook(book);
 
         getViewInteractor().showProgress();
         new CompositeDisposable().add(observable

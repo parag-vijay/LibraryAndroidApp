@@ -9,6 +9,7 @@ import java.util.List;
  */
 
 public class Book {
+    @SerializedName("bookId")
     private String id;
     @SerializedName("email")
     private String ownerId;

@@ -14,13 +14,13 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by aaditya on 12/6/17.
  */
 
 public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder> {
-
 
 
     private Context context;
@@ -47,6 +47,8 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
         return books.size();
     }
 
+
+
     public class CartViewHolder extends RecyclerView.ViewHolder {
 
         @BindView(R.id.txt_title)
@@ -61,7 +63,12 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
 
         void bindViews(int position) {
             txtTitle.setText(books.get(position).getTitle());
-            serial.setText(position + 1 );
+            serial.setText(String.valueOf(position + 1));
+        }
+
+        @OnClick(R.id.imageView)
+        public void onViewClicked() {
+            ((CartActivity)context).deleteFromCart(books.get(getAdapterPosition()));
         }
     }
 }

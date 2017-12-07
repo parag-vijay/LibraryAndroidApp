@@ -40,6 +40,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
 <<<<<<< Updated upstream
       <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
@@ -86,10 +87,12 @@
         </entry>
       </file>
 <<<<<<< Updated upstream
+=======
+>>>>>>> cbb28e8f64ba68cba201e6a60dbf1e8d7eb67748
       <file leaf-file-name="LibrarianPresenterImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/service/librarian/LibrarianPresenterImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-480">
+            <state relative-caret-position="-435">
               <caret line="70" column="76" selection-start-line="70" selection-start-column="76" selection-end-line="70" selection-end-column="76" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -110,13 +113,16 @@
       <file leaf-file-name="AddBookActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/module/librarian/AddBookActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="114" column="8" selection-start-line="114" selection-start-column="8" selection-end-line="118" selection-end-column="30" />
+            <state relative-caret-position="1965">
+              <caret line="131" column="5" selection-start-line="30" selection-start-column="4" selection-end-line="131" selection-end-column="5" />
               <folding>
-                <element signature="e#3575#3576#0" expanded="true" />
-                <element signature="e#3637#3638#0" expanded="true" />
-                <element signature="e#3685#3686#0" expanded="true" />
-                <element signature="e#3744#3745#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#3602#3603#0" expanded="true" />
+                <element signature="e#3664#3665#0" expanded="true" />
+                <element signature="e#3712#3713#0" expanded="true" />
+                <element signature="e#3771#3772#0" expanded="true" />
+                <element signature="e#3960#4165#0" expanded="true" />
+                <element signature="e#4164#4165#0" expanded="true" />
               </folding>
 =======
       <file leaf-file-name="CartAdapter.java" pinned="false" current-in-tab="false">
@@ -130,13 +136,28 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
 <<<<<<< Updated upstream
       <file leaf-file-name="SearchActivity.java" pinned="false" current-in-tab="true">
+=======
+      <file leaf-file-name="SearchActivity.java" pinned="false" current-in-tab="false">
+>>>>>>> cbb28e8f64ba68cba201e6a60dbf1e8d7eb67748
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/module/librarian/SearchActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-108">
-              <caret line="82" column="49" selection-start-line="82" selection-start-column="49" selection-end-line="82" selection-end-column="49" />
+            <state relative-caret-position="203">
+              <caret line="86" column="68" selection-start-line="86" selection-start-column="68" selection-end-line="86" selection-end-column="68" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthPresenterImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/service/auth/AuthPresenterImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
               <folding>
+<<<<<<< HEAD
                 <element signature="e#2287#2288#0" expanded="true" />
                 <element signature="e#2360#2361#0" expanded="true" />
                 <element signature="e#2408#2409#0" expanded="true" />
@@ -154,19 +175,27 @@
                 <element signature="e#1246#1247#0" expanded="true" />
                 <element signature="e#1281#1282#0" expanded="true" />
 >>>>>>> Stashed changes
+=======
+                <element signature="imports" expanded="true" />
+>>>>>>> cbb28e8f64ba68cba201e6a60dbf1e8d7eb67748
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
 <<<<<<< Updated upstream
       <file leaf-file-name="SearchAdapter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/module/librarian/SearchAdapter.java">
+=======
+      <file leaf-file-name="CartAdapter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/module/cart/CartAdapter.java">
+>>>>>>> cbb28e8f64ba68cba201e6a60dbf1e8d7eb67748
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="81" column="1" selection-start-line="81" selection-start-column="1" selection-end-line="81" selection-end-column="1" />
+            <state relative-caret-position="192">
+              <caret line="65" column="5" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
               <folding>
-                <element signature="e#1025#1026#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
 =======
       <file leaf-file-name="CartActivity.java" pinned="false" current-in-tab="false">
@@ -180,12 +209,17 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
 <<<<<<< Updated upstream
       <file leaf-file-name="search_list_item.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/search_list_item.xml">
+=======
+      <file leaf-file-name="layout_cart_item.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_cart_item.xml">
+>>>>>>> cbb28e8f64ba68cba201e6a60dbf1e8d7eb67748
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+            <state relative-caret-position="150">
+              <caret line="10" column="33" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="33" />
               <folding />
 =======
       <file leaf-file-name="IssuedBooksActivity.java" pinned="false" current-in-tab="false">
@@ -204,12 +238,17 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
 <<<<<<< Updated upstream
       <file leaf-file-name="patron_book_item_view.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/patron_book_item_view.xml">
+=======
+      <file leaf-file-name="activity_update_book.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_update_book.xml">
+>>>>>>> cbb28e8f64ba68cba201e6a60dbf1e8d7eb67748
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="61" selection-end-column="15" />
+            <state relative-caret-position="517">
+              <caret line="177" column="46" selection-start-line="177" selection-start-column="46" selection-end-line="177" selection-end-column="46" />
               <folding />
 =======
       <file leaf-file-name="UserPreference.java" pinned="false" current-in-tab="false">
@@ -228,12 +267,32 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
 <<<<<<< Updated upstream
+=======
+      <file leaf-file-name="UpdateBookActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/module/librarian/UpdateBookActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="458">
+              <caret line="144" column="25" selection-start-line="144" selection-start-column="25" selection-end-line="144" selection-end-column="25" />
+              <folding>
+                <element signature="e#4385#4386#0" expanded="true" />
+                <element signature="e#4447#4448#0" expanded="true" />
+                <element signature="e#4495#4496#0" expanded="true" />
+                <element signature="e#4554#4555#0" expanded="true" />
+                <element signature="e#4745#4911#0" expanded="true" />
+                <element signature="e#4910#4911#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+>>>>>>> cbb28e8f64ba68cba201e6a60dbf1e8d7eb67748
       <file leaf-file-name="activity_search.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_search.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+            <state relative-caret-position="300">
+              <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -245,6 +304,7 @@
       <file leaf-file-name="activity_add_book.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_book.xml">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="105">
               <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
 =======
@@ -257,6 +317,10 @@
             <state relative-caret-position="361">
               <caret line="28" column="45" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
 >>>>>>> Stashed changes
+=======
+            <state relative-caret-position="435">
+              <caret line="29" column="40" selection-start-line="0" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+>>>>>>> cbb28e8f64ba68cba201e6a60dbf1e8d7eb67748
               <folding />
             </state>
           </provider>
@@ -1797,7 +1861,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4537614603074" />
+        <entry key="$PROJECT_DIR$" value="4537693406851" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -2147,8 +2211,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/module/main/MainActivity.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/dimension.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_login.xml" />
@@ -2182,7 +2244,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_dash_board.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/model/Cart.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/module/cart/CartActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/module/cart/CartAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/module/librarian/DashBoardActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/module/auth/OnBoardActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/service/librarian/LibrarianPresenter.java" />
@@ -2191,12 +2252,16 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/service/Service.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/model/Book.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/service/librarian/LibrarianPresenterImpl.java" />
+<<<<<<< HEAD
 <<<<<<< Updated upstream
         <option value="$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/module/librarian/AddBookActivity.java" />
+=======
+>>>>>>> cbb28e8f64ba68cba201e6a60dbf1e8d7eb67748
         <option value="$PROJECT_DIR$/app/src/main/res/layout/search_layout.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/search_list_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/module/librarian/SearchAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_search.xml" />
+<<<<<<< HEAD
 =======
         <option value="$PROJECT_DIR$/app/src/main/res/layout/patron_issued_books_recycler.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/model/Book.java" />
@@ -2206,7 +2271,13 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/util/UserPreference.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/module/patron/IssuedBooksActivity.java" />
 >>>>>>> Stashed changes
+=======
+        <option value="$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/module/librarian/AddBookActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_update_book.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/module/librarian/UpdateBookActivity.java" />
+>>>>>>> cbb28e8f64ba68cba201e6a60dbf1e8d7eb67748
         <option value="$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/module/librarian/SearchActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/module/cart/CartAdapter.java" />
       </list>
     </option>
   </component>
@@ -2390,7 +2461,7 @@
     <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="device.picker.selection" value="TA0980YZCT" />
+    <property name="device.picker.selection" value="ZY223CL9VZ" />
     <property name="VectorAssetImportPath" value="$PROJECT_DIR$/.." />
     <property name="DEBUGGABLE_DEVICE" value="motorola-xt1526-TA0980YZCT" />
     <property name="DEBUGGABLE_PROCESS" value="com.android.cmpe277project" />
@@ -2398,6 +2469,9 @@
     <property name="DEBUGGER_ID" value="Auto" />
   </component>
   <component name="RecentsManager">
+    <key name="android.template.packageName">
+      <recent name="com.android.cmpe277project.module.librarian" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/main/res" />
       <recent name="$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project" />
@@ -2810,6 +2884,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
 =======
@@ -2817,6 +2892,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/librarian_book_item_view.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/librarian_main.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> cbb28e8f64ba68cba201e6a60dbf1e8d7eb67748
           <folding />
         </state>
       </provider>
@@ -3163,6 +3245,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_search.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -3186,6 +3269,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/model/Patron.java">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/module/cart/CartActivity.java">
+>>>>>>> cbb28e8f64ba68cba201e6a60dbf1e8d7eb67748
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
@@ -3273,6 +3359,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/module/patron/IssuedBooksAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="347">
@@ -3286,6 +3373,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/util/UserPreference.java">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/service/librarian/LibrarianViewInteractor.java">
+>>>>>>> cbb28e8f64ba68cba201e6a60dbf1e8d7eb67748
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
           <caret line="58" column="45" selection-start-line="58" selection-start-column="45" selection-end-line="58" selection-end-column="45" />
@@ -3320,6 +3410,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_book.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -3353,6 +3444,8 @@
       </provider>
     </entry>
 <<<<<<< Updated upstream
+=======
+>>>>>>> cbb28e8f64ba68cba201e6a60dbf1e8d7eb67748
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="71">
@@ -3397,33 +3490,30 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/service/librarian/LibrarianPresenterImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-435">
+          <caret line="70" column="76" selection-start-line="70" selection-start-column="76" selection-end-line="70" selection-end-column="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/module/librarian/SearchAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="81" column="1" selection-start-line="81" selection-start-column="1" selection-end-line="81" selection-end-column="1" />
+        <state relative-caret-position="855">
+          <caret line="78" column="80" selection-start-line="78" selection-start-column="80" selection-end-line="78" selection-end-column="80" />
           <folding>
             <element signature="e#1025#1026#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/module/librarian/AddBookActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="114" column="8" selection-start-line="114" selection-start-column="8" selection-end-line="118" selection-end-column="30" />
-          <folding>
-            <element signature="e#3575#3576#0" expanded="true" />
-            <element signature="e#3637#3638#0" expanded="true" />
-            <element signature="e#3685#3686#0" expanded="true" />
-            <element signature="e#3744#3745#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_search.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+        <state relative-caret-position="300">
+          <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -3431,17 +3521,94 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_book.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="40" selection-start-line="0" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_update_book.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="177" column="46" selection-start-line="177" selection-start-column="46" selection-end-line="177" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/module/librarian/AddBookActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1965">
+          <caret line="131" column="5" selection-start-line="30" selection-start-column="4" selection-end-line="131" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3602#3603#0" expanded="true" />
+            <element signature="e#3664#3665#0" expanded="true" />
+            <element signature="e#3712#3713#0" expanded="true" />
+            <element signature="e#3771#3772#0" expanded="true" />
+            <element signature="e#3960#4165#0" expanded="true" />
+            <element signature="e#4164#4165#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/module/librarian/UpdateBookActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="144" column="25" selection-start-line="144" selection-start-column="25" selection-end-line="144" selection-end-column="25" />
+          <folding>
+            <element signature="e#4385#4386#0" expanded="true" />
+            <element signature="e#4447#4448#0" expanded="true" />
+            <element signature="e#4495#4496#0" expanded="true" />
+            <element signature="e#4554#4555#0" expanded="true" />
+            <element signature="e#4745#4911#0" expanded="true" />
+            <element signature="e#4910#4911#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/module/librarian/SearchActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-108">
-          <caret line="82" column="49" selection-start-line="82" selection-start-column="49" selection-end-line="82" selection-end-column="49" />
+        <state relative-caret-position="203">
+          <caret line="86" column="68" selection-start-line="86" selection-start-column="68" selection-end-line="86" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/service/auth/AuthPresenterImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
           <folding>
-            <element signature="e#2287#2288#0" expanded="true" />
-            <element signature="e#2360#2361#0" expanded="true" />
-            <element signature="e#2408#2409#0" expanded="true" />
-            <element signature="e#2469#2470#0" expanded="true" />
-            <element signature="e#2517#2518#0" expanded="true" />
-            <element signature="e#2575#2576#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_cart_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/module/cart/CartAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="65" column="5" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
 =======
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/cmpe277project/module/librarian/SearchAdapter.java">
