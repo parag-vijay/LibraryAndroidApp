@@ -1,6 +1,7 @@
 package com.android.cmpe277project.service;
 
 import com.android.cmpe277project.model.Book;
+import com.android.cmpe277project.model.PatronRequestCart;
 import com.android.cmpe277project.model.User;
 
 import java.util.List;
@@ -43,5 +44,15 @@ public interface Service {
     @FormUrlEncoded
     @POST("librarian/delete")
     Observable<Response<ResponseBody>> deleteBook(@Field("bookId") String query, @Field("email") String email);
+
+    @FormUrlEncoded
+    @POST("patron/search")
+    Observable<Response<List<Book>>> searchBookPatron(@Field("searchstring") String query, @Field("email") String email);
+
+    @POST("patron/issuebook")
+    Observable<Response<ResponseBody>> issueBooks(@Body PatronRequestCart patronRequestCart);
+
+    @POST("patron/returnbook")
+    Observable<Response<ResponseBody>> returnBooks(@Body PatronRequestCart patronRequestCart);
 
 }
