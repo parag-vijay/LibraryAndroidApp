@@ -13,6 +13,8 @@ public class User {
     private String password;
     private int universityId;
 
+    private List<Book> books;
+
     public String getName() {
         return name;
     }
@@ -45,4 +47,11 @@ public class User {
         this.universityId = universityId;
     }
 
+    public List<Book> getBooks() {
+        return books;
+    }
+
+    public void setBooks(List<Book> books) {
+        this.books = books;
+    }
 }
