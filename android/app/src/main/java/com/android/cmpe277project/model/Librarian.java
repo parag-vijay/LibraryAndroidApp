@@ -9,17 +9,5 @@ import java.util.List;
 
 public class Librarian extends User {
 
-    private List<Book> bookList;
 
-    Librarian(){
-        bookList = new ArrayList<Book>();
-    }
-
-    public List<Book> getBookList() {
-        return bookList;
-    }
-
-    public void setBookList(List<Book> bookList) {
-        this.bookList = bookList;
-    }
 }

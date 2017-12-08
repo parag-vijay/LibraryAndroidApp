@@ -15,6 +15,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by parag on 12/7/17.
@@ -36,11 +37,7 @@ public class IssuedBooksActivity extends BaseActivity {
         ButterKnife.bind(this);
 
         userPreference = new UserPreference(this);
-        issuedBooks = userPreference.readIssuedBooks();
-
-        if(issuedBooks == null){
-
-        }
+        issuedBooks = userPreference.readUser().getBooks();
 
         issuedBooksAdapter = new IssuedBooksAdapter(this, issuedBooks);
 
@@ -50,4 +47,16 @@ public class IssuedBooksActivity extends BaseActivity {
         recyclerIssued.setAdapter(issuedBooksAdapter);
 
     }
+
+    @OnClick(R.id.btn_renew)
+    public void onRenewButtonClicked(){
+
+    }
+
+    @OnClick(R.id.btn_return)
+    public void onReturnButtonClicked(){
+
+    }
+
+
 }

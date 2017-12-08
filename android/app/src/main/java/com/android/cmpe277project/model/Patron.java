@@ -8,16 +8,8 @@ import java.util.List;
 
 public class Patron extends User {
 
-    private List<Book> books;
     private long due;
 
-    public List<Book> getBooks() {
-        return books;
-    }
-
-    public void setBooks(List<Book> books) {
-        this.books = books;
-    }
 
     public long getDue() {
         return due;

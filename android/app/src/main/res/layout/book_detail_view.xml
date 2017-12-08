@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:id="@+id/ll_book_detail"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_weight="0.32"
+        android:src="@drawable/ic_book_black_24dp"
+        android:id="@+id/imv_cover"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BOOK TITLE"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:id="@+id/tv_title"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AUTHOR"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        android:id="@+id/tv_author"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PUBLISHER"
+        android:textSize="15dp"
+        android:id="@+id/edt_publisher"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Year of pub"
+        android:textSize="15dp"
+        android:id="@+id/tv_yop"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="location"
+        android:textSize="15dp"
+        android:id="@+id/tv_location"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="# of copies"
+        android:textSize="15dp"
+        android:id="@+id/tv_num_cpy"/>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Current Status"
+        android:textSize="15dp"
+        android:id="@+id/tv_status"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Keywords"
+        android:textSize="15dp"
+        android:id="@+id/tv_keywords"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add_shopping_cart_black_24dp"
+        android:layout_gravity="center"
+        />
+
+
+
+
+    </LinearLayout>
