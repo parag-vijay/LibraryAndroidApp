@@ -26,6 +26,8 @@
         <activity android:name=".module.librarian.UpdateBookActivity"></activity>
         <activity android:name=".module.patron.IssuedBooksActivity"></activity>
         <activity android:name=".module.patron.PatronSearchActivity"></activity>
+        <activity android:name=".module.patron.BookDetailActivity"></activity>
+
     </application>
 
 </manifest>

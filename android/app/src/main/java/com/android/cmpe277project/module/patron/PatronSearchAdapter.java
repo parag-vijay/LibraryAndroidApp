@@ -1,6 +1,7 @@
 package com.android.cmpe277project.module.patron;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 
 import com.android.cmpe277project.R;
 import com.android.cmpe277project.model.Book;
+import com.google.gson.Gson;
 
 import org.w3c.dom.Text;
 
@@ -49,30 +51,28 @@ public class PatronSearchAdapter  extends RecyclerView.Adapter<PatronSearchAdapt
         return new PatronSearchViewHolder(view);
     }
 
-public class PatronSearchViewHolder extends RecyclerView.ViewHolder {
-    @BindView(R.id.book_name)
-    TextView bookName;
+    public class PatronSearchViewHolder extends RecyclerView.ViewHolder {
+        @BindView(R.id.book_name)
+        TextView bookName;
 
-    @BindView(R.id.author_name)
-    TextView authorName;
+        @BindView(R.id.author_name)
+        TextView authorName;
 
 
+        public PatronSearchViewHolder(View itemView) {
+            super(itemView);
+            ButterKnife.bind(this, itemView);
+        }
 
-    public PatronSearchViewHolder(View itemView) {
-        super(itemView);
-        ButterKnife.bind(this, itemView);
+        public void bindViews(int position) {
+            Book book = books.get(position);
+            bookName.setText(book.getTitle());
+            authorName.setText(book.getAuthor());
+        }
+
+        @OnClick(R.id.rl_pat_srch_itm)
+        public void onItemClicked() {
+            ((PatronSearchActivity) context).detailView(books.get(getAdapterPosition()));
+        }
     }
-
-    public void bindViews(int position) {
-        Book book = books.get(position);
-        bookName.setText(book.getTitle());
-        authorName.setText(book.getAuthor());
-    }
-
-    @OnClick(R.id.rl_pat_srch_itm)
-    public void onItemClicked(){
-
-    }
-
-}
 }
