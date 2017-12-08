@@ -47,7 +47,12 @@ public class OnBoardActivity extends BaseActivity implements AuthViewInteractor{
 
         user = userPreference.readUser();
 
-        if( user != null) {
+        Bundle b = new Bundle();
+        b.putString("type", "patron");
+        startActivity(DashBoardActivity.class, b);
+        finish();
+        return;
+        /*if( user != null) {
             Bundle b = new Bundle();
 
             if (user.getEmail().contains("sjsu.edu"))
@@ -63,7 +68,7 @@ public class OnBoardActivity extends BaseActivity implements AuthViewInteractor{
         authPresenter = new AuthPresenterImpl();
         authPresenter.attachViewInteractor(this);
 
-        loadFragments();
+        loadFragments();*/
     }
 
     @OnPageChange(R.id.home_viewpager)

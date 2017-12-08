@@ -15,7 +15,7 @@ public interface PatronViewInteractor extends ViewInteractor {
 
     void hideProgress();
 
-    void onSuccess();
+    void onSuccess(String message);
 
     void onResult(List<Book> books);
 }

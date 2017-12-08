@@ -123,7 +123,7 @@ public class AddBookActivity extends BaseActivity implements LibrarianViewIntera
                 finish();
                 startActivity(intent);
             }
-        },3000);
+        },2000);
     }
 
     @Override

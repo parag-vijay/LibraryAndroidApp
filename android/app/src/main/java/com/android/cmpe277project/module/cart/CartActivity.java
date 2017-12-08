@@ -1,30 +1,47 @@
 package com.android.cmpe277project.module.cart;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.DividerItemDecoration;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import android.os.Handler;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
+import android.view.View;
+import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 
 import com.android.cmpe277project.R;
 import com.android.cmpe277project.base.BaseActivity;
+import com.android.cmpe277project.model.Book;
 import com.android.cmpe277project.model.Cart;
+import com.android.cmpe277project.model.User;
+import com.android.cmpe277project.module.util.Bakery;
+import com.android.cmpe277project.service.patron.PatronPresenter;
+import com.android.cmpe277project.service.patron.PatronPresenterImpl;
+import com.android.cmpe277project.service.patron.PatronViewInteractor;
 import com.android.cmpe277project.util.UserPreference;
 
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
+import butterknife.OnPageChange;
 
-public class CartActivity extends BaseActivity {
+public class CartActivity extends BaseActivity implements PatronViewInteractor {
 
-    @BindView(R.id.recycler_cart)
-    RecyclerView recyclerCart;
+    @BindView(R.id.home_tab_layout)
+    TabLayout tabLayout;
+    @BindView(R.id.home_viewpager)
+    ViewPager viewpager;
+    @BindView(R.id.onboard_progressBar)
+    ProgressBar progressBar;
+    @BindView(R.id.rootLayout)
+    RelativeLayout rootLayout;
 
+    private static int ONBOARD_PAGE_NUM = 0;
     private UserPreference userPreference;
-    private CartAdapter cartAdapter;
-    private List<Cart> carts;
+    private PatronPresenter patronPresenter;
+    private User user;
+    private Bakery bakery;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,26 +49,64 @@ public class CartActivity extends BaseActivity {
         setContentView(R.layout.activity_cart);
         ButterKnife.bind(this);
 
-        userPreference = new UserPreference(this);
-        carts = userPreference.readCart();
+        bakery = new Bakery(this);
+        patronPresenter = new PatronPresenterImpl(this);
+        patronPresenter.attachViewInteractor(this);
 
-        carts.add(new Cart("java", "Java Concepts"));
-        carts.add(new Cart("python", "Hardway Pythton"));
-        cartAdapter = new CartAdapter(this, carts);
-
-        recyclerCart.setLayoutManager(new LinearLayoutManager(this));
-        recyclerCart.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
-        recyclerCart.setItemAnimator(new DefaultItemAnimator());
-        recyclerCart.setAdapter(cartAdapter);
+        loadFragments();
     }
 
-    @OnClick(R.id.btn_issue)
-    public void onViewClicked() {
-
+    @OnPageChange(R.id.home_viewpager)
+    public void onPageSelected(int position){
+        ONBOARD_PAGE_NUM = position;
     }
 
-    public void deleteFromCart(Cart cart) {
-        carts.remove(cart);
-        cartAdapter.notifyDataSetChanged();
+    private void loadFragments() {
+        viewpager.setAdapter(new CartFragmentPagerAdapter(getSupportFragmentManager(), this));
+        tabLayout.post(new Runnable() {
+            @Override
+            public void run() {
+                tabLayout.setupWithViewPager(viewpager);
+            }
+        });
+        viewpager.setCurrentItem(ONBOARD_PAGE_NUM);
+    }
+
+    public void renewBook(List<Cart> cartList) {
+        patronPresenter.renewBook(cartList);
+    }
+
+    public void returnBook(List<Cart> cartList) {
+        patronPresenter.returnBook(cartList);
+    }
+
+    public void issueBook(List<Cart> cartList) {
+        patronPresenter.issueBook(cartList);
+    }
+
+    @Override
+    public void showProgress() {
+        progressBar.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void hideProgress() {
+        progressBar.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void onSuccess(String message) {
+        bakery.snackShort(rootLayout, message);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                finish();
+            }
+        },2000);
+    }
+
+    @Override
+    public void onResult(List<Book> books) {
+
     }
 }

@@ -15,6 +15,7 @@ public class Book {
     private String ownerId;
     private String author;
     private String title;
+    @SerializedName("callnumber")
     private String callNumber;
     private String publisher;
     @SerializedName("yop")
