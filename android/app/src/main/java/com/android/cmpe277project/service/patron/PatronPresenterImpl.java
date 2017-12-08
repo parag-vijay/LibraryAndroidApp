@@ -82,7 +82,7 @@ public class PatronPresenterImpl extends BasePresenter<PatronViewInteractor> imp
                     @Override
                     public void onNext(@NonNull Response<ResponseBody> responseBodyResponse) {
                         getViewInteractor().hideProgress();
-                        getViewInteractor().onSuccess();
+                        getViewInteractor().onSuccess("Successfully Issued");
                     }
 
                     @Override
@@ -113,7 +113,7 @@ public class PatronPresenterImpl extends BasePresenter<PatronViewInteractor> imp
                     @Override
                     public void onNext(@NonNull Response<ResponseBody> responseBodyResponse) {
                         getViewInteractor().hideProgress();
-                        getViewInteractor().onSuccess();
+                        getViewInteractor().onSuccess("Successfully Renewed");
                     }
 
                     @Override
@@ -144,7 +144,7 @@ public class PatronPresenterImpl extends BasePresenter<PatronViewInteractor> imp
                     @Override
                     public void onNext(@NonNull Response<ResponseBody> responseBodyResponse) {
                         getViewInteractor().hideProgress();
-                        getViewInteractor().onSuccess();
+                        getViewInteractor().onSuccess("Successfully Returned");
                     }
 
                     @Override
