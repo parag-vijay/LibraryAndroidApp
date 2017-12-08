@@ -14,7 +14,6 @@ import com.android.cmpe277project.R;
 import com.android.cmpe277project.base.BaseActivity;
 import com.android.cmpe277project.model.Librarian;
 import com.android.cmpe277project.model.User;
-import com.android.cmpe277project.module.librarian.DashBoardActivity;
 import com.android.cmpe277project.service.auth.AuthPresenter;
 import com.android.cmpe277project.service.auth.AuthPresenterImpl;
 import com.android.cmpe277project.service.auth.AuthViewInteractor;

@@ -12,12 +12,9 @@ import android.widget.TextView;
 
 import com.android.cmpe277project.R;
 import com.android.cmpe277project.base.BaseFragment;
-import com.android.cmpe277project.module.librarian.DashBoardActivity;
 import com.android.cmpe277project.module.util.Bakery;
-import com.android.cmpe277project.service.auth.AuthViewInteractor;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.OnTextChanged;
 

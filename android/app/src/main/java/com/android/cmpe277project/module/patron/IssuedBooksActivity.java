@@ -48,15 +48,4 @@ public class IssuedBooksActivity extends BaseActivity {
 
     }
 
-    @OnClick(R.id.btn_renew)
-    public void onRenewButtonClicked(){
-
-    }
-
-    @OnClick(R.id.btn_return)
-    public void onReturnButtonClicked(){
-
-    }
-
-
 }

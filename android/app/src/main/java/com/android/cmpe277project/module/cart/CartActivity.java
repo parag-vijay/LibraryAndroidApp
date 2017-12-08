@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
@@ -36,6 +38,8 @@ public class CartActivity extends BaseActivity implements PatronViewInteractor {
     ProgressBar progressBar;
     @BindView(R.id.rootLayout)
     RelativeLayout rootLayout;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
 
     private static int ONBOARD_PAGE_NUM = 0;
     private UserPreference userPreference;
@@ -54,6 +58,22 @@ public class CartActivity extends BaseActivity implements PatronViewInteractor {
         patronPresenter.attachViewInteractor(this);
 
         loadFragments();
+        setSupportActionBar(toolbar);
+
+        getSupportActionBar().setTitle("");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            // Respond to the action bar's Up/Home button
+            case android.R.id.home:
+                finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @OnPageChange(R.id.home_viewpager)

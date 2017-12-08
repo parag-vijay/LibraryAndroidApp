@@ -1,4 +1,4 @@
-package com.android.cmpe277project.module.librarian;
+package com.android.cmpe277project.module.auth;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,10 @@ import com.android.cmpe277project.model.Librarian;
 import com.android.cmpe277project.model.User;
 import com.android.cmpe277project.module.auth.OnBoardActivity;
 import com.android.cmpe277project.module.cart.CartActivity;
+import com.android.cmpe277project.module.librarian.AddBookActivity;
+import com.android.cmpe277project.module.librarian.SearchActivity;
+import com.android.cmpe277project.module.patron.IssuedBooksActivity;
+import com.android.cmpe277project.module.patron.PatronSearchActivity;
 import com.android.cmpe277project.util.UserPreference;
 
 import butterknife.OnClick;
@@ -61,11 +65,12 @@ public class DashBoardActivity extends BaseActivity {
     public void onPatronViewClicked(View view) {
         switch (view.getId()) {
             case R.id.patronSearch:
-                startActivity(SearchActivity.class, null);
+                startActivity(PatronSearchActivity.class, null);
                 break;
             case R.id.patronProfile:
                 break;
             case R.id.checkoutList:
+                startActivity(IssuedBooksActivity.class, null);
                 break;
             case R.id.cart_card:
                 startActivity(CartActivity.class, null);

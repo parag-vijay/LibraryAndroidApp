@@ -21,9 +21,11 @@
         </activity>
         <activity android:name=".module.cart.CartActivity" />
         <activity android:name=".module.librarian.AddBookActivity"></activity>
-        <activity android:name=".module.librarian.DashBoardActivity" />
+        <activity android:name=".module.auth.DashBoardActivity" />
         <activity android:name=".module.librarian.SearchActivity" />
         <activity android:name=".module.librarian.UpdateBookActivity"></activity>
+        <activity android:name=".module.patron.IssuedBooksActivity"></activity>
+        <activity android:name=".module.patron.PatronSearchActivity"></activity>
     </application>
 
 </manifest>

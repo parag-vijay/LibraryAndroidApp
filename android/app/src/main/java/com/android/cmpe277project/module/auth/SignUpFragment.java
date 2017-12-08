@@ -12,7 +12,6 @@ import android.widget.EditText;
 import com.android.cmpe277project.R;
 import com.android.cmpe277project.base.BaseFragment;
 import com.android.cmpe277project.model.User;
-import com.android.cmpe277project.module.librarian.DashBoardActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
