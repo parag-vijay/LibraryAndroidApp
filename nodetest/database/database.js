@@ -5,9 +5,9 @@ const mysql = require('mysql');
 
 const pool = mysql.createPool({
     connectionLimit: 100,
-    host: 'localhost',
-    user: 'root',
-    password: 'Sunil@28',
+    host: 'cmpe277.cc3i1g7oonuj.us-west-1.rds.amazonaws.com',
+    user: 'cmpe277',
+    password: 'cmpe277db',
     database: 'cmpe277',
     port: 3306
 

@@ -12,16 +12,17 @@ var transporter = nodemailer.createTransport({
 
 
 
-function sendMail(req,res,messageIndex,message,code) {
+function sendMail(email,res,messageIndex,message,code) {
     console.log("inside send mail part");
 
     var mailOptions;
 
+    console.log("=================",email);
     switch (messageIndex){
         case 1:
             mailOptions = {
                 from: 'library.cmpe277@gmail.com',
-                to: req.body.email,
+                to: email,
                 subject: 'You have registered for cmpe277 Library',
                 html: '<h1>Welcome : </h1><p>you have registered to the cmpe277 Library application : CMPE277 rocks!</p>' +
                 '<p>Please use the below code to activate your account!</p>'+
@@ -33,7 +34,7 @@ function sendMail(req,res,messageIndex,message,code) {
         case 2:
             mailOptions = {
                 from: 'library.cmpe277@gmail.com',
-                to: req.body.email,
+                to: email,
                 subject: 'You have issued book from cmpe277 Library',
                 html: '<p>You have issued books from the cmpe277 Library</p>' +
                 '<p>Here are the book titles that you issued.</p>'+
@@ -44,7 +45,7 @@ function sendMail(req,res,messageIndex,message,code) {
         case 3:
             mailOptions = {
                 from: 'library.cmpe277@gmail.com',
-                to: req.body.email,
+                to: email,
                 subject: 'You have returned book to cmpe277 Library',
                 html: '<p>You have returned books to the cmpe277 Library</p>' +
                 '<p>Here are the book titles that you returned.</p>'+

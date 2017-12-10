@@ -70,5 +70,74 @@ function isAuthenticUser(callbackFunction, email, password,isLibrarian) {
 }
 
 
+
+function isBookPresent(callbackFunction, title, author) {
+
+    var isBookPresentQuery;
+
+    isBookPresentQuery = "SELECT * FROM Books WHERE Author='" + author + "' AND Title='" + title + "'";
+
+
+
+    console.log("Query is :" + isBookPresentQuery);
+    db.executeQuery(function (err, results) {
+        if (err) {
+            console.log("ERROR: " + error.message);
+            throw err;
+        } else {
+            if (results.length > 0) {
+                console.log("Book present in DB update count...!!!");
+                console.log(results);
+                status = true;
+                callbackFunction(status, results);
+
+            } else {
+                console.log("Add Book...!!!");
+                status = false;
+                callbackFunction(status);
+
+            }
+
+        }
+
+    }, isBookPresentQuery);
+
+}
+
+function isBookIssued(callbackFunction, bookId, issueStatus) {
+
+    var isBookIssuedQuery;
+
+    isBookIssuedQuery = "SELECT * FROM PatronTransaction WHERE BookId='" + bookId + "' AND ActionType='" + issueStatus + "'";
+
+    console.log("Query is :" + isBookIssuedQuery);
+    db.executeQuery(function (err, results) {
+        if (err) {
+            console.log("ERROR: " + error.message);
+            throw err;
+        } else {
+            if (results.length > 0) {
+                console.log("Book issued cannot be deleted...!!!");
+                console.log(results);
+                status = true;
+                callbackFunction(status, results);
+
+            } else {
+                console.log("Book is not issued...!!!");
+                status = false;
+                callbackFunction(status);
+
+            }
+
+        }
+
+    }, isBookIssuedQuery);
+
+}
+
+
+
 exports.isExistingUser = isExistingUser;
 exports.isAuthenticUser = isAuthenticUser
+exports.isBookPresent = isBookPresent;
+exports.isBookIssued = isBookIssued;

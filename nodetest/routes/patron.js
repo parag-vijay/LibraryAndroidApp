@@ -87,7 +87,7 @@ router.post('/issuebook', function (req, res, next) {
                                                         throw err;
                                                     } else {
                                                         var mailIndex=2;
-                                                        mail.sendMail(req, res,mailIndex,bookId.title,mailIndex, function (err) {
+                                                        mail.sendMail(email, res,mailIndex,bookId.title,mailIndex, function (err) {
                                                             if (err) {
                                                                 console.log("Error while sending email")
                                                             }
@@ -376,7 +376,7 @@ router.post('/returnbook', function (req, res, next) {
                                                 } else {
 
                                                     var mailIndex=3;
-                                                    mail.sendMail(req, res,mailIndex,bookId.title,mailIndex, function (err) {
+                                                    mail.sendMail(email, res,mailIndex,bookId.title,mailIndex, function (err) {
                                                         if (err) {
                                                             console.log("Error while sending email")
                                                         }
